@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- stuffless base -->
+	
+	<ThingDef Name="DBStufflessApparelBase" ParentName="ApparelMakeableBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>0.7</SellPriceFactor>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<thingCategories>
+			<li>Headgear</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Name="DBStufflessApparelMakeableBase" ParentName="DBStufflessApparelBase" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>TailoringSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+
+	
+	<!-- Hats!!! -->
+	
+	<ThingDef ParentName="DBStufflessApparelMakeableBase">
+		<defName>Apparel_DBSantaHat</defName>
+		<label>santa hat</label>
+		<description>Have they been naughty, or have they been nice? You decide! Spread holiday cheer or meyham with this 100% authentic off-world relic.</description>
+		<graphicData>
+			<texPath>Things/SantaHat/SantaHat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Cloth>35</Cloth>
+		</costList>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>0.1</Mass>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Heat>4</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.15</SocialImpact>
+		</equippedStatOffsets>
+		<generateCommonality>0.01</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/SantaHat/SantaHat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Outlander</li>
+				<li>Workforce</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+	
+	<ThingDef ParentName="DBStufflessApparelMakeableBase">
+		<defName>Apparel_DBElfHat</defName>
+		<label>elf hat</label>
+		<description>With this hat, you're no ordinary pawn! Help Santa dish out gifts or grenades, it's your call.</description>
+		<graphicData>
+			<texPath>Things/ElfHat/ElfHat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Cloth>35</Cloth>
+		</costList>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>0.1</Mass>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Heat>4</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.15</SocialImpact>
+		</equippedStatOffsets>
+		<generateCommonality>0.01</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/ElfHat/ElfHat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Outlander</li>
+				<li>Workforce</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+	
+	
+</Defs>
